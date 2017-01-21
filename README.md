@@ -1,35 +1,33 @@
 codes inside [@licarent](https://twitter.com/licarent)
 
-# software requirement
-- keras
-- Mecab neologd
-- jaconv
-- BeautifulSoup
-
- etc.
+# required library
+- [Keras](https://keras.io/#installation)
+- [mecab-ipadic-neologd](https://github.com/neologd/mecab-ipadic-neologd)
+- [jaconv](https://github.com/ikegami-yukino/jaconv)
+- [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 
 # How to use
-1. Get [YJ Captions 26k Dataset](https://github.com/yahoojapan/YJCaptions) and unzip.
-2. Extract caption
+- Get [YJ Captions 26k Dataset](https://github.com/yahoojapan/YJCaptions) and unzip.
+- Extract caption
 ```
 python caption.py > data.txt
 ```
-3. (optional) Clean dataset manually
-4. Train char-rnn
+- (optional) Clean dataset manually
+- Train char-rnn
 ```
 python train.py
 ```
-5. Create sentences
+- Create sentences
 ```
 python create_sentence.py > /dev/null 2> japanese.txt
 ```
-6. (optional) Clean sentence manually
-7. Translate to English
+- (optional) Clean sentence manually
+- Translate to English
 ```
 python translate.py > english.txt
 ```
-8. Generate images. Use https://github.com/reedscot/icml2016
-9. Tweet (use cron)
+- Generate images. Use https://github.com/reedscot/icml2016
+- Tweet (use cron)
 ```
 python tweet.py
 ```
